@@ -11,7 +11,7 @@ def index(request):
 class HomeView(TemplateView):
     template_name = 'base.html'
 
-class OsirixView(TemplateView):
+class OsirixView(RedirectView):
     subject = SubjectName
     output_dir = OutputDirectory
     template_name = 'osirixpage.html'
