@@ -6,9 +6,9 @@
 {% block content %}
 
 <form action="/osirix", method="post">
-
+{% csrf_token %}
   Enter a subject name:<br>
-  <input type="text" name"subject"><br>
+  <input type="text" name="subject"><br>
   Enter an output directory:<br>
   <input type="text" name="directory">
 

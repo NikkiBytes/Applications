@@ -1,17 +1,21 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views.generic import TemplateView, RedirectView
+from .models import SubjectName, OutputDirectory
 
 def index(request):
     return HttpResponse("hello I a here")
 
-from django.views.generic import TemplateView, RedirectView
 
 # Create your views here.
 class HomeView(TemplateView):
     template_name = 'base.html'
 
 class OsirixView(TemplateView):
+    subject = SubjectName
+    output_dir = OutputDirectory
     template_name = 'osirixpage.html'
+   
 
 
 class BidsView(TemplateView):
