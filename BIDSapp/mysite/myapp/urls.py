@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from myapp.views import HomeView, OsirixView
+from myapp.views import HomeView, OsirixView, BidsView
 
 
 urlpatterns = [
