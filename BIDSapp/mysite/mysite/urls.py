@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from myapp.views import HomeView
+from myapp.views import HomeView, OsirixView
 
 urlpatterns = [
     path('', HomeView.as_view()), 
+    path('osirix/', include('myapp.urls')), #OsirixView.as_view()),
     path('home/', include('myapp.urls')),
     path('admin/', admin.site.urls),
 ]

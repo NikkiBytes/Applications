@@ -1,0 +1,21 @@
+                             
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="/osirix_scraper", method="post">
+
+  Enter a subject name:<br>
+  <input type="text" name"subject"><br>
+  Enter an output directory:<br>
+  <input type="text" name="directory">
+
+  <input type="submit" value="OK">
+</form>
+
+{% endblock %}
+
+
+

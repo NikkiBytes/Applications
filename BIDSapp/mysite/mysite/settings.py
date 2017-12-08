@@ -31,13 +31,14 @@ ALLOWED_HOSTS = ['127.0.0.1','174.108.91.218']
 # Application definition
 
 INSTALLED_APPS = [
+    'myapp.apps.MyappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myapp',
+    
 ]
 
 MIDDLEWARE = [
