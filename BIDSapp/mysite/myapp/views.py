@@ -10,5 +10,9 @@ from django.views.generic import TemplateView, RedirectView
 class HomeView(TemplateView):
     template_name = 'base.html'
 
-class OsirixView(RedirectView):
+class OsirixView(TemplateView):
     template_name = 'osirixpage.html'
+
+
+class BidsView(TemplateView):
+    template_name = 'bidspage.html'
