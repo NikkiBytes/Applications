@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from myapp.views import HomeView, DataView, BidsView
+from myapp.views import HomeView, DataView
 
 
 urlpatterns = [
