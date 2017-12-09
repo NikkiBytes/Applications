@@ -1,11 +1,14 @@
                              
 
+<h1>Data Page </h1> 
+<h3> This is your lab data</h3> 
+
 
 {% extends 'base.html' %}
 
 {% block content %}
 
-<form action="/osirix", method="post">
+<form action="/data", method="post">
 {% csrf_token %}
   Enter a subject name:<br>
   <input type="text" name="subject"><br>
