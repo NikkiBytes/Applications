@@ -15,7 +15,7 @@ class DataView(RedirectView):
     template_name = 'datapage.html'
     
     def dataviewredirect(self, *args, **kwargs):
-        response = HttpResponseRedirect("data/)
+        response = HttpResponseRedirect("data/")
 
 
 
