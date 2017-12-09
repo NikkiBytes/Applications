@@ -3,8 +3,6 @@ from django.http import HttpResponseRedirect
 from django.views.generic import TemplateView, RedirectView
 from .models import SubjectName, OutputDirectory
 
-def index(request):
-    return HttpResponse("hello I a here")
 
 
 # Create your views here.
@@ -16,6 +14,8 @@ class DataView(RedirectView):
     output_dir = OutputDirectory
     template_name = 'datapage.html'
     
+    def dataviewredirect(self, *args, **kwargs):
+        response = HttpResponseRedirect("data/)
 
 
 

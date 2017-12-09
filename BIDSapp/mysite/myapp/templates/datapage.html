@@ -1,21 +1,24 @@
                              
 
-<h1>Data Page </h1> 
-<h3> This is your lab data</h3> 
-
-
 {% extends 'base.html' %}
 
 {% block content %}
 
-<form action="/data", method="post">
+
+<h1>Data Page </h1> 
+<h3> This is your lab data</h3> 
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+
+<form action="{% url 'myapp:data' %}", method="post">
 {% csrf_token %}
   Enter a subject name:<br>
   <input type="text" name="subject"><br>
   Enter an output directory:<br>
   <input type="text" name="directory">
 
-  <input type="submit" value="OK">
+  <input type="submit" value="Data">
 </form>
 
 {% endblock %}
