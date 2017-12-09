@@ -19,7 +19,7 @@ from myapp.views import HomeView, OsirixView
 
 urlpatterns = [
     path('', HomeView.as_view()), 
-    path('osirix/', include('myapp.urls')), #OsirixView.as_view()),
+    path('/osirix/', include('myapp.urls')), #OsirixView.as_view()),
     path('home/', include('myapp.urls')),
     path('admin/', admin.site.urls),
 ]
