@@ -5,5 +5,5 @@ from myapp.views import HomeView, DataView, BidsView
 
 urlpatterns = [
     path('',  HomeView.as_view(), name="home"),
-    path("data/, DataView.as_view(), name="data"),
+    path("data/", DataView.as_view(), name="data"),
 ]
