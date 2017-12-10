@@ -14,7 +14,7 @@ class DataView(RedirectView):
     subject = SubjectName
     output_dir = OutputDirectory
     #template_name = 'datapage.html'
-    pattern_name 'data'
+    pattern_name = 'data'
     
     def get_redirect_url(self, *args, **kwargs):
         response = HttpResponseRedirect("data/")
