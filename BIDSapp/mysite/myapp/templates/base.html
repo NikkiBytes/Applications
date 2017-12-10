@@ -30,13 +30,23 @@ This application is being designed for bids conversion
 
   <div class="w3-padding-32">
     <div class="w3-bar w3-border">
-      <a href="{% url 'home' %}", class="w3-bar-item w3-button">Home</a>
-      <a href="{% url 'data' %}", class="w3-bar-item w3-button">OsiriX Scraper </a>
+      <a href="{% url 'myapp:home' %}", class="w3-bar-item w3-button">Home</a>
+      <a href="{% url 'myapp:data' %}", class="w3-bar-item w3-button">OsiriX Scraper </a>
 
     </div>
   </div>
 
 </header>
+<h3> This is your lab data area</h3>
+<form action="{% url 'myapp:data' %}", method="post">
+{% csrf_token %}
+  Enter a subject name:<br>
+  <input type="text" name="subject"><br>
+  Enter an output directory:<br>
+  <input type="text" name="directory">
+
+  <input type="submit" value="Data">
+</form>
 {% block content %}
 {% endblock %}
 
