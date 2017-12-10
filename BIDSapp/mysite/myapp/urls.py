@@ -4,6 +4,6 @@ from myapp.views import HomeView, DataView
 
 app_name= 'myapp'
 urlpatterns = [
-    path('',  HomeView.as_view(), name='home'),
+    path('',  HomeView.as_view(), name='index'),
     #path("data/", DataView.as_view()),
 ]
