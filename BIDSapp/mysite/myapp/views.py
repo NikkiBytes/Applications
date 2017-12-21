@@ -19,6 +19,10 @@ class BIDSView(FormView):
     def form_valid(self, form):
         form.bids_conversion()
         return super().form_valid(form)   
+
+class OsirixView(FormView):
+     template_name = 'osirixview.html'
+     form_class = BIDSForm     
 # pattern_name = 'data'
     
    # def get_redirect_url(self, *args, **kwargs):
