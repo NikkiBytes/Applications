@@ -1,12 +1,14 @@
+
+
 <html>
 
-<head><title>NIBL Homepage</title></head>
+<head><title>BIDS Containerization App</title></head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font$
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-lime.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 <style>
 body,h1 {font-family: "Raleway", Arial, sans-serif}
 h1 {letter-spacing: 6px}
@@ -19,28 +21,64 @@ h1 {letter-spacing: 6px}
 
 
 <!-- Header -->
-<header class="w3-panel w3-center w3-opacity" style="padding:128px 16px">
-
-<h1>Neuropsychologoy of Ingestive Behavior Lab</h1>
-<h2> UNC Chapel Hill </h2>
-
-This application is being designed for bids conversion
-
-<!-- Header -->
-
-  <div class="w3-padding-32">
-    <div class="w3-bar w3-border">
-      <a href="#" class="w3-bar-item w3-button">Home</a>
-      <a href= class="w3-bar-item w3-button w3-light-grey">OsiriX Scraper </a>
-
-    </div>
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+  <div class="w3-center">
+  
+  <h1 class="w3-xxxlarge w3-animate-bottom">DICOM to BIDS Conversion</h1>
+  <h4> UNC CHAPEL HILL </h4>
   </div>
-
 </header>
+
+
+
+<div class="w3-row-padding">
+<div class="w3-half">
+<form class="w3-container w3-card-4" style="min-height:400px", action="#", method="post">
+<h2>Get data from OsiriX:</h2>
+<div class="w3-section">
+{% csrf_token %}
+  Enter a subject name:<br>
+  <input type="text" name="subject"><br>
+  </div>
+  <div class="w3-section">
+
+  Enter the output directory:<br>
+  <input type="text" name="directory">
+  </div>
+  <div class="w3-section">
+
+  <input type="submit" value="Enter">
+  </div>
+</form>
+</div>
+
+
+
+<div class="w3-half">
+<form class="w3-container w3-card-4" style="min-height:400px", action="#", method="post">
+<h2>Convert data into BIDS:</h2>
+<div class="w3-section">
+{% csrf_token %}
+  Enter a subject name:<br>
+  <input type="text" name="subjectname"><br>
+  </div>
+  <div class="w3-section">
+  Enter the input directory:<br>
+  <input type="text" name="input_directory">
+  </div>
+  <div class="w3-section">
+  Enter the output directory:<br>
+  <input type="text" name="output_directory">
+  </div>
+  <div class="w3-section">
+  <input type="submit" value="Enter">
+  </div>
+</form>
+</div>
 {% block content %}
 {% endblock %}
 
+</div>
+
 </body>
 </html>
-
-

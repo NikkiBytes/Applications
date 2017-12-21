@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mybidsapp',
 	'USER': 'root',
-	'PASSWORD': 'cyberess',
+	'PASSWORD': 'coolio',
 
     }
 }

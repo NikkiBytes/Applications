@@ -1,6 +1,8 @@
+
+
 <html>
 
-<head><title>NIBL Homepage</title></head>
+<head><title>BIDS Containerization App</title></head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,7 +24,7 @@ h1 {letter-spacing: 6px}
 <header class="w3-container w3-theme w3-padding" id="myHeader">
   <div class="w3-center">
   
-  <h1 class="w3-xxxlarge w3-animate-bottom">Neuropsychology of Ingestive Behavior Lab</h1>
+  <h1 class="w3-xxxlarge w3-animate-bottom">DICOM to BIDS Converter</h1>
   <h4> UNC CHAPEL HILL </h4>
   </div>
 </header>
@@ -35,13 +37,13 @@ h1 {letter-spacing: 6px}
 <h2>Get data from OsiriX:</h2>
 <div class="w3-section">
 {% csrf_token %}
-  Enter a subject name:<br>
-  <input type="text" name="subject"><br>
+  <label for="subject_name">Enter a subject name:</label><br>
+  <input id="subject_name" type="text" name="subject_name" value="{{ current_subject }}"><br>
   </div>
   <div class="w3-section">
 
-  Enter the output directory:<br>
-  <input type="text" name="directory">
+  <label for="output_directory">Enter the output directory:</label><br>
+  <input id="output_directory" type="text" name="output_directory" value="{{ current_output_dir }}">
   </div>
   <div class="w3-section">
 
@@ -57,16 +59,16 @@ h1 {letter-spacing: 6px}
 <h2>Convert data into BIDS:</h2>
 <div class="w3-section">
 {% csrf_token %}
-  Enter a subject name:<br>
-  <input type="text" name="subjectname"><br>
+  <label for="subject_name">Enter a subject name:</label><br>
+  <input id="subject_name" type="text" name="subject_name" value="{{ current_subject }}"><br>
   </div>
   <div class="w3-section">
-  Enter the input directory:<br>
-  <input type="text" name="input_directory">
+  <label for="input_directory">Enter the input directory:</label><br>
+  <input id="input_directory" type="text" name="input_directory" value="{{ current_input_dir }}">
   </div>
   <div class="w3-section">
-  Enter the output directory:<br>
-  <input type="text" name="output_directory">
+  <label for="output_directory">Enter the output directory:</label><br>
+  <input id="output_directory" type="text" name="output_directory" values="{{ current_output_dir }}">
   </div>
   <div class="w3-section">
   <input type="submit" value="Enter">
@@ -80,5 +82,3 @@ h1 {letter-spacing: 6px}
 
 </body>
 </html>
-
-

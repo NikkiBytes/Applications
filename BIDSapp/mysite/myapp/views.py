@@ -7,14 +7,19 @@ from .models import SubjectName, OutputDirectory
 
 # Create your views here.
 
+
 class HomeView(TemplateView):
     template_name = 'base.html'
 
-class DataView(RedirectView):
-    subject = SubjectName
-    output_dir = OutputDirectory
+
+class BIDSView(FormView):
     template_name = 'datapage.html'
-   # pattern_name = 'data'
+    form_class = BIDSForm
+    
+    def form_valid(self, form)
+        form.bids_conversion()
+    return super().form_valid(form)   
+# pattern_name = 'data'
     
    # def get_redirect_url(self, *args, **kwargs):
      #   response = HttpResponseRedirect("data/")
