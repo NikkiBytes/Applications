@@ -8,7 +8,7 @@ class BIDSForm(forms.Form):
     
     multi_sess_boolean = forms.BooleanField()
     multi_sess_count = forms.IntegerField()
-    multi_sess_name = form.CharField()
+    multi_sess_name = forms.CharField()
 
     def bids_conversion(self):
         pass     

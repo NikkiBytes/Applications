@@ -11,15 +11,9 @@
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
 
-<form action="{% url 'myapp:data' %}", method="post">
-{% csrf_token %}
-  Enter a subject name:<br>
-  <input type="text" name="subject"><br>
-  Enter an output directory:<br>
-  <input type="text" name="directory">
+<h1> We processed the BIDS conversion. </h1>
+<p> Now we show our variables from our form. </p>
 
-  <input type="submit" value="Data">
-</form>
 
 {% endblock %}
 
