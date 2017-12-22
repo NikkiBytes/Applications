@@ -1,14 +1,16 @@
 
 from django import forms
+from django.forms import ModelForm 
+from myapp.models import BIDSModel, OsirixModel 
 
-class BIDSForm(forms.Form):
-    subject_name = forms.CharField()
-    input_directory =  forms.CharField()
-    output_directory = forms.CharField()
-    
-    multi_sess_boolean = forms.BooleanField()
-    multi_sess_count = forms.IntegerField()
-    multi_sess_name = forms.CharField()
 
-    def bids_conversion(self):
-        pass     
+class BIDSForm(ModelForm):
+    class Meta: 
+        model = BIDSModel 
+        fields = ['sub_name', 'in_dir', 'out_dir', 'multi_sess_pass'] 
+
+class OsirixForm(ModelForm):
+    class Meta:
+        model = OsirixModel 
+        fields = ['sub_name', 'out_dir']
+
