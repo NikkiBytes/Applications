@@ -13,10 +13,6 @@
 body,h1 {font-family: "Raleway", Arial, sans-serif}
 h1 {letter-spacing: 6px}
 .w3-row-padding img {margin-bottom: 12px}
-
-input[type=text]:focus {
-    background-color: palegreen;
-}
 </style>
 <body>
 
@@ -37,17 +33,17 @@ input[type=text]:focus {
 
 <div class="w3-row-padding">
 <div class="w3-half">
-<form class="w3-container w3-card-4" style="min-height:400px", action="{% url 'myapp:osirix' %}", method="post">
+<form class="w3-container w3-card-4" style="min-height:400px", action="#", method="post">
 <h2>Get data from OsiriX:</h2>
 <div class="w3-section">
 {% csrf_token %}
-  <label for="subject_name">Enter a subject name:</label><br>
-  <input id="subject_name" type="text" name="subject_name" value="{{ current_subject }}"><br>
+  <label for="subject_name"> Enter a subject name: </label><br>
+  <input id="subject_name" type="text" name="subject_name" value="{{ current_subject" }}"><br>
   </div>
   <div class="w3-section">
 
-  <label for="output_directory">Enter the output directory:</label><br>
-  <input id="output_directory" type="text" name="output_directory" value="{{ current_output_dir }}">
+  <labelk for Enter the output directory:<br>
+  <input type="text" name="directory">
   </div>
   <div class="w3-section">
 
@@ -59,20 +55,20 @@ input[type=text]:focus {
 
 
 <div class="w3-half">
-<form class="w3-container w3-card-4" style="min-height:400px", action="{% url 'myapp:bids' %}", method="post">
+<form class="w3-container w3-card-4" style="min-height:400px", action="#", method="post">
 <h2>Convert data into BIDS:</h2>
 <div class="w3-section">
 {% csrf_token %}
-  <label for="subject_name">Enter a subject name:</label><br>
-  <input id="subject_name" type="text" name="subject_name" value="{{ current_subject }}"><br>
+  Enter a subject name:<br>
+  <input type="text" name="subjectname"><br>
   </div>
   <div class="w3-section">
-  <label for="input_directory">Enter the input directory:</label><br>
-  <input id="input_directory" type="text" name="input_directory" value="{{ current_input_dir }}">
+  Enter the input directory:<br>
+  <input type="text" name="input_directory">
   </div>
   <div class="w3-section">
-  <label for="output_directory">Enter the output directory:</label><br>
-  <input id="output_directory" type="text" name="output_directory" values="{{ current_output_dir }}">
+  Enter the output directory:<br>
+  <input type="text" name="output_directory">
   </div>
   <div class="w3-section">
   <input type="submit" value="Enter">
