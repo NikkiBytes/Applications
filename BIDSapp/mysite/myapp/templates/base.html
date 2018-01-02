@@ -27,13 +27,14 @@ input[type=text]:focus {
 <!-- Header -->
 <header class="w3-container w3-theme w3-padding" id="myHeader">
   <div class="w3-center">
-  
+
   <h1 class="w3-xxxlarge w3-animate-bottom">DICOM to BIDS Converter</h1>
   <h4> UNC CHAPEL HILL </h4>
   </div>
 </header>
 
-
+-- Here is the OsiriX form
+-- Here is where we get the inputs necessary for scraping osiriX for subjects and transferring them to an HPC
 
 <div class="w3-row-padding">
 <div class="w3-half">
@@ -56,6 +57,9 @@ input[type=text]:focus {
 </form>
 </div>
 
+-- Here is my BIDS conversion form
+-- Here is where we get necessary inputs for a DICOM to BIDS conversion, done inside an HPC
+
 
 
 <div class="w3-half">
@@ -73,6 +77,18 @@ input[type=text]:focus {
   <div class="w3-section">
   <label for="output_directory">Enter the output directory:</label><br>
   <input id="output_directory" type="text" name="output_directory" values="{{ current_output_dir }}">
+  </div>
+  <div class="w3-section">
+  <label for="password">Enter your HPC password: </label><br>
+  <input id="password" type="password" name="password" values="{{ current_password}}">
+  </div>
+  <div class="w3-section">
+  <label for="hpc_address">Enter your HPC address (myusername@hpc_address_here):</label><br>
+  <input id="hpc_address" type="text" name="hpc_address" values="{{ current_hpc_address }}">
+  </div>
+  <div class="w3-section">
+  <label for="dicom_path">Enter the dicom (.dcm) path in your data ( /yourinputdirectory/yoursubjectnamefolder/a/path/to/dicoms ):</label><br>
+  <input id="dicom_path" type="text" name="dicom_path" values="{{ current_dicom_path }}">
   </div>
   <div class="w3-section">
   <input type="submit" value="Enter">
