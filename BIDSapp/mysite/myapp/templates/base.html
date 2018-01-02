@@ -91,6 +91,12 @@ Here is where we get the inputs necessary for scraping osiriX for subjects and t
   <input id="dicom_path" type="text" name="dicom_path" values="{{ current_dicom_path }}">
   </div>
   <div class="w3-section">
+  <label for="converter_file">Select a heuristic file: </label><br>
+  <input id="converter_file" input type="file" name="converter_file" values="{{ current_file }}">
+  <input type="submit">
+  </div>
+
+  <div class="w3-section">
   <input type="submit" value="Enter">
   </div>
 </form>
