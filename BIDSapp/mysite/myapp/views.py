@@ -10,7 +10,7 @@ from django.urls import reverse_lazy
 
 class HomeView(TemplateView):
     template_name = 'base.html'
-  
+
 
 class BIDSView(TemplateView):
     template_name = 'datapage.html'
@@ -20,24 +20,26 @@ class BIDSView(TemplateView):
     def post(self, request):
         sub = request.POST['subject_name']
         out_dir = request.POST['output_directory']
-        in_dir =  request.POST['input_directory'] 
-        return render(request, self.template_name, { 'sub': sub, 'out': out_dir, 'in': in_dir }) 
+        in_dir =  request.POST['input_directory']
+        password =  request.POST['pass']
+        hpc_address =  request.POST['hpc_address']
+        dicom_path =  request.POST['dicom_path']
+        return render(request, self.template_name, { 'sub': sub, 'out': out_dir, 'in': in_dir })
 
- 
+
 '''   def post(self, request):
         form = self.form_class(request.POST)
         if form.is_valid():
             return HttpResponseRedirect('/success/')
 
-        return render(request, self.template_name, {'form': form} ) 
+        return render(request, self.template_name, {'form': form} )
 '''
 class OsirixView(FormView):
      template_name = 'osirixview.html'
-     form_class = BIDSForm     
+     form_class = BIDSForm
 # pattern_name = 'data'
-    
+
    # def get_redirect_url(self, *args, **kwargs):
      #   response = HttpResponseRedirect("data/")
 
-    #    return response 
-
+    #    return response

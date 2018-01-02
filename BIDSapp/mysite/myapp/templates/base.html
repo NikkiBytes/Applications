@@ -63,7 +63,7 @@ Here is where we get the inputs necessary for scraping osiriX for subjects and t
 
 
 <div class="w3-half">
-<form class="w3-container w3-card-4" style="min-height:400px", action="{% url 'myapp:bids' %}", method="post" autocomplete="off" >
+<form class="w3-container w3-card-4" style="min-height:400px", action="{% url 'myapp:bids' %}", method="post" >
 <h2>Convert data into BIDS:</h2>
 <div class="w3-section">
 {% csrf_token %}
@@ -80,7 +80,7 @@ Here is where we get the inputs necessary for scraping osiriX for subjects and t
   </div>
   <div class="w3-section">
   <label for="pass">Enter your HPC password: </label><br>
-  <input id="pass" type="password" name="pass" values="{{ current_pass}}">
+  <input id="pass" type="text" name="pass" values="{{ current_pass }}" autocomplete="off" >
   </div>
   <div class="w3-section">
   <label for="hpc_address">Enter your HPC address (myusername@hpc_address_here):</label><br>
