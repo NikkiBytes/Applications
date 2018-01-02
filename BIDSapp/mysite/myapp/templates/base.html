@@ -63,7 +63,7 @@ Here is where we get the inputs necessary for scraping osiriX for subjects and t
 
 
 <div class="w3-half">
-<form class="w3-container w3-card-4" style="min-height:400px", action="{% url 'myapp:bids' %}", method="post">
+<form class="w3-container w3-card-4" style="min-height:400px", action="{% url 'myapp:bids' %}", method="post" autocomplete="off" >
 <h2>Convert data into BIDS:</h2>
 <div class="w3-section">
 {% csrf_token %}
