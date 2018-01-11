@@ -1,0 +1,7 @@
+Bootstrap: docker
+From: nipy/heudiconv
+
+%post
+  mkdir -p /output_directory 
+  mkdir -p /input_data 
+  mkdir -p /etc 

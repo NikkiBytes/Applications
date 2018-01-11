@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mybidsapp',
+        'NAME': 'unccbidsapp',
 	'USER': 'root',
-	'PASSWORD': 'coolio',
+	'PASSWORD': 'vp6?8hC]5t<$Hyw?',
 
     }
 }
