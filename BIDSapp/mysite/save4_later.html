@@ -1,0 +1,44 @@
+
+<!-- Here is my BIDS conversion form
+ Here is where we get necessary inputs for a DICOM to BIDS conversion, done inside an HPC -->
+
+
+<div class="w3-half">
+<form class="w3-container w3-card-4" style="min-height:400px", action="{% url 'myapp:bids' %}", method="post" >
+<h2>Convert data into BIDS:</h2>
+<div class="w3-section">
+{% csrf_token %}
+  <label for="subject_name">Enter a subject name:</label><br>
+  <input id="subject_name" type="text" name="subject_name" value="{{ current_subject }}"><br>
+  </div>
+  <div class="w3-section">
+  <label for="input_directory">Enter the input directory:</label><br>
+  <input id="input_directory" type="text" name="input_directory" value="{{ current_input_dir }}">
+  </div>
+  <div class="w3-section">
+  <label for="output_directory">Enter the output directory:</label><br>
+  <input id="output_directory" type="text" name="output_directory" values="{{ current_output_dir }}">
+  </div>
+  <div class="w3-section">
+  <label for="pass">Enter your HPC password: </label><br>
+  <input id="pass" type="text" name="pass" values="{{ current_pass }}" autocomplete="off" >
+  </div>
+  <div class="w3-section">
+  <label for="hpc_address">Enter your HPC address (myusername@hpc_address_here):</label><br>
+  <input id="hpc_address" type="text" name="hpc_address" values="{{ current_hpc_address }}">
+  </div>
+  <div class="w3-section">
+  <label for="dicom_path">Enter the dicom (.dcm) path in your data <br> ( /yourinputdirectory/yoursubjectnamefolder/a/path/to/dicoms ):</label><br>
+  <input id="dicom_path" type="text" name="dicom_path" values="{{ current_dicom_path }}">
+  </div>
+  <div class="w3-section">
+  <label for="converter_file">Select a heuristic file: </label><br>
+  <input id="converter_file" input type="file" name="converter_file" values="{{ current_file }}">
+  <input type="submit">
+  </div>
+
+  <div class="w3-section">
+  <input type="submit" value="Enter">
+  </div>
+</form>
+</div>
