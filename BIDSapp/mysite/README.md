@@ -18,3 +18,7 @@ mysite/
 ## Registering the catalog application  
 
 When the application is created it has to be registered with the project so it will be included when any tools are run(i.e. models added to db). **To register** an application add it the the ``INSTALLED_APPS`` list in the project settings.  
+
+Open the project settings file mysite/mysite/settings.py and find the definition for ``INSTALLED_APPS`` list. Then add a new line at the end of the list.
+
+    The new line specifies the application configuration object (CatalogConfig) that was generated for you in mysite/myapp/apps.py when you create the application. 
