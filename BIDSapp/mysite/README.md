@@ -6,7 +6,7 @@ mysite/
       urls.py: site url-view mappings. Could contain all url mapping code, _it is more common to delegate some of the mapping to particular applications._  
       wsgi.py: used to help the Django application communicate with the web server. _can be treated as the boilerplate._  
   myapp/  
-    + migrations/: stores the 'migrations'-files that allow the user to automatically update your databases as modes are modified.  
+  > migrations/: stores the 'migrations'-files that allow the user to automatically update your databases as modes are modified.  
     __init__.py: an empty file created so Django/Python will recognize the folder as a Python Package and allow you to use its objects within other parts of the project.  
     views.py: views are stored here  
     models.py: models stored here  
