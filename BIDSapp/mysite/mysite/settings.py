@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'unccbidsapp',
+        'NAME': 'NIBLapp',
 	'USER': 'root',
-	'PASSWORD': 'vp6?8hC]5t<$Hyw?',
+	'PASSWORD': '',
 
     }
 }
