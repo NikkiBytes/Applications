@@ -11,9 +11,14 @@ from django.urls import reverse_lazy
 class HomeView(TemplateView):
     template_name = 'base.html'
 
+class FeatView(TemplateView):
+    template_name = "feat_analysis_view.html"
+
+class fMRIView(TemplateView):
+    template_name = 'fmriprep_view.html'
 
 class BIDSView(TemplateView):
-    template_name = 'datapage.html'
+    template_name = 'BIDS_view.html'
    # form_class = BIDSForm
    # success_url = reverse_lazy('bidsconversion')
     model = BIDSModel
